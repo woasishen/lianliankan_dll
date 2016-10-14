@@ -1,0 +1,11 @@
+C:\Users\Administrator.SC-201608021220\Documents\Visual Studio 2012\Projects\CompteConnect\Test\bin\Debug\Test.exe.config
+C:\Users\Administrator.SC-201608021220\Documents\Visual Studio 2012\Projects\CompteConnect\Test\bin\Debug\Test.exe
+C:\Users\Administrator.SC-201608021220\Documents\Visual Studio 2012\Projects\CompteConnect\Test\bin\Debug\Test.pdb
+C:\Users\Administrator.SC-201608021220\Documents\Visual Studio 2012\Projects\CompteConnect\Test\bin\Debug\CompteConnect.dll
+C:\Users\Administrator.SC-201608021220\Documents\Visual Studio 2012\Projects\CompteConnect\Test\bin\Debug\CompteConnect.pdb
+C:\Users\Administrator.SC-201608021220\Documents\Visual Studio 2012\Projects\CompteConnect\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+C:\Users\Administrator.SC-201608021220\Documents\Visual Studio 2012\Projects\CompteConnect\Test\obj\Debug\Test.TestForm.resources
+C:\Users\Administrator.SC-201608021220\Documents\Visual Studio 2012\Projects\CompteConnect\Test\obj\Debug\Test.Properties.Resources.resources
+C:\Users\Administrator.SC-201608021220\Documents\Visual Studio 2012\Projects\CompteConnect\Test\obj\Debug\Test.csproj.GenerateResource.Cache
+C:\Users\Administrator.SC-201608021220\Documents\Visual Studio 2012\Projects\CompteConnect\Test\obj\Debug\Test.exe
+C:\Users\Administrator.SC-201608021220\Documents\Visual Studio 2012\Projects\CompteConnect\Test\obj\Debug\Test.pdb

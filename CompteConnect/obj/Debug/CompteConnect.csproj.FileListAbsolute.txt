@@ -1,0 +1,4 @@
+C:\Users\Administrator.SC-201608021220\Documents\Visual Studio 2012\Projects\CompteConnect\CompteConnect\bin\Debug\CompteConnect.dll
+C:\Users\Administrator.SC-201608021220\Documents\Visual Studio 2012\Projects\CompteConnect\CompteConnect\bin\Debug\CompteConnect.pdb
+C:\Users\Administrator.SC-201608021220\Documents\Visual Studio 2012\Projects\CompteConnect\CompteConnect\obj\Debug\CompteConnect.dll
+C:\Users\Administrator.SC-201608021220\Documents\Visual Studio 2012\Projects\CompteConnect\CompteConnect\obj\Debug\CompteConnect.pdb
