@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Drawing;
 using System.Linq;
 
 namespace CompteConnect
@@ -34,7 +33,7 @@ namespace CompteConnect
             return result;
         }
 
-        public uint[][] Datas { private set; get; }
+        public uint[][] Datas { get; }
 
         /// <summary>
         /// 构造函数

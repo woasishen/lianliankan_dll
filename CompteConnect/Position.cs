@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace CompteConnect
+﻿namespace CompteConnect
 {
     public class Position
     {
@@ -13,7 +11,7 @@ namespace CompteConnect
         {
             if (ReferenceEquals(null, obj)) return false;
             if (ReferenceEquals(this, obj)) return true;
-            if (obj.GetType() != this.GetType()) return false;
+            if (obj.GetType() != GetType()) return false;
             return Equals((Position) obj);
         }
 
@@ -31,8 +29,8 @@ namespace CompteConnect
             Column = column;
         }
 
-        public int Row { get; private set; }
-        public int Column { get; private set; }
+        public int Row { get; }
+        public int Column { get; }
 
         public static bool operator ==(Position p1, Position p2)
         {
@@ -55,7 +53,7 @@ namespace CompteConnect
 
         public override string ToString()
         {
-            return string.Format("Row: {0}，Column: {1}", Row, Column);
+            return $"Row: {Row}，Column: {Column}";
         }
     }
 }
