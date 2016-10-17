@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompteConnect", "CompteConnect\CompteConnect.csproj", "{53198EAF-1247-4926-B816-B41BE4F3E43E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{286978E1-6476-4D9A-811A-7058063F00BD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWinform", "TestWinform\TestWinform.csproj", "{192A7F31-D75D-479E-9E42-E7C562B365E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +15,10 @@ Global
 		{53198EAF-1247-4926-B816-B41BE4F3E43E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53198EAF-1247-4926-B816-B41BE4F3E43E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53198EAF-1247-4926-B816-B41BE4F3E43E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{286978E1-6476-4D9A-811A-7058063F00BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{286978E1-6476-4D9A-811A-7058063F00BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{286978E1-6476-4D9A-811A-7058063F00BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{286978E1-6476-4D9A-811A-7058063F00BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{192A7F31-D75D-479E-9E42-E7C562B365E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{192A7F31-D75D-479E-9E42-E7C562B365E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{192A7F31-D75D-479E-9E42-E7C562B365E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{192A7F31-D75D-479E-9E42-E7C562B365E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

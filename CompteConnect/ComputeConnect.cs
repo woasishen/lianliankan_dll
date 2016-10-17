@@ -52,11 +52,11 @@ namespace CompteConnect
         /// <param name="startP">开始点</param>
         /// <param name="endP">终止点</param>
         /// <returns>路径:包括开始点、中间点、终止点（2-4个），若不能连接为null</returns>
-        public Point[] ComputePath(Point startP, Point endP)
+        public Position[] ComputePath(Position startP, Position endP)
         {
             if (startP == endP
-                || Datas[startP.X][startP.Y] == 0
-                || Datas[startP.X][startP.Y] != Datas[endP.X][endP.Y])
+                || Datas[startP.Row][startP.Column] == 0
+                || Datas[startP.Row][startP.Column] != Datas[endP.Row][endP.Column])
             {
                 return null;
             }
@@ -65,26 +65,27 @@ namespace CompteConnect
                 return new[] { startP, endP };
             }
 
-            int xStart, xEnd, yStart, yEnd;
-            GetReachableIndex(startP, endP, out xStart, out xEnd, out yStart, out yEnd);
+            int rStart, rEnd, cStart, cEnd;
+            GetReachableIndex(startP, endP, out rStart, out rEnd, out cStart, out cEnd);
 
             var result = new[] { startP, endP };
 
-            return ComputePath(startP.Y, xStart, xEnd, ref result, (y, x) => new Point(x, y))
-                || ComputePath(startP.X, yStart, yEnd, ref result, (x, y) => new Point(x, y))
+            return ComputePath(startP.Column, endP.Column, rStart, rEnd, ref result, (y, x) => new Position(x, y))
+                || ComputePath(startP.Row, endP.Row, cStart, cEnd, ref result, (x, y) => new Position(x, y))
                 ? result.Distinct().ToArray()
                 : null;
         }
 
         private bool ComputePath(
-            int same, int start, int end,
-            ref Point[] result,
-            Func<int, int, Point> getPointFunc)
+            int same1, int same2,
+            int start, int end,
+            ref Position[] result,
+            Func<int, int, Position> getPositionFunc)
         {
-            for (var i = start; i < end; i++)
+            for (var i = start; i <= end; i++)
             {
-                var tempS = getPointFunc(same, i);
-                var tempE = getPointFunc(same, i);
+                var tempS = getPositionFunc(same1, i);
+                var tempE = getPositionFunc(same2, i);
                 if (!CanDrawLine(tempS, tempE))
                 {
                     continue;
@@ -96,30 +97,30 @@ namespace CompteConnect
         }
 
         private void GetReachableIndex(
-            Point startP, Point endP,
+            Position startP, Position endP,
             out int xStart, out int xEnd,
             out int yStart, out int yEnd)
         {
-            int sXs, sXe, sYs, sYe;
-            int eXs, eXe, eYs, eYe;
+            int sRs, sRe, sCs, sCe;
+            int eRs, eRe, eCs, eCe;
 
-            GetReachableIndex(startP, out sXs, out sXe, out sYs, out sYe);
-            GetReachableIndex(endP, out eXs, out eXe, out eYs, out eYe);
+            GetReachableIndex(startP, out sRs, out sRe, out sCs, out sCe);
+            GetReachableIndex(endP, out eRs, out eRe, out eCs, out eCe);
 
-            xStart = Math.Max(sXs, eXs);
-            xEnd = Math.Min(sXe, eXe);
+            xStart = Math.Max(sRs, eRs);
+            xEnd = Math.Min(sRe, eRe);
 
-            yStart = Math.Max(sYs, eYs);
-            yEnd = Math.Min(sYe, eYe);
+            yStart = Math.Max(sCs, eCs);
+            yEnd = Math.Min(sCe, eCe);
         }
 
         private void GetReachableIndex(
-            Point p,
+            Position p,
             out int xStart, out int xEnd,
             out int yStart, out int yEnd)
         {
-            GetReachableIndex(p.X, p.Y, Datas[0].Length, out yStart, out yEnd, (x, y) => Datas[x][y]);
-            GetReachableIndex(p.Y, p.X, Datas.Length, out xStart, out xEnd, (y, x) => Datas[x][y]);
+            GetReachableIndex(p.Row, p.Column, Datas[0].Length, out yStart, out yEnd, (x, y) => Datas[x][y]);
+            GetReachableIndex(p.Column, p.Row, Datas.Length, out xStart, out xEnd, (y, x) => Datas[x][y]);
         }
 
         private void GetReachableIndex(
@@ -128,24 +129,24 @@ namespace CompteConnect
             Func<int, int, uint> getDataFunc)
         {
             var temp = dif;
-            while (temp - 1 > 0 && getDataFunc(same, temp - 1) == 0)
+            while (temp - 1 >= 0 && getDataFunc(same, temp - 1) == 0)
             {
                 temp--;
             }
             start = temp;
 
             temp = dif;
-            while (temp + 1 < length && getDataFunc(same, temp - 1) == 0)
+            while (temp + 1 < length && getDataFunc(same, temp + 1) == 0)
             {
                 temp++;
             }
             end = temp;
         }
 
-        private bool CanDrawLine(Point p1, Point p2)
+        private bool CanDrawLine(Position p1, Position p2)
         {
-            return (p1.X == p2.X && CanDrawLine(p1.X, p1.Y, p2.Y, (x, y) => Datas[x][y]))
-                || (p1.Y == p2.Y && CanDrawLine(p1.Y, p1.X, p2.X, (y, x) => Datas[x][y]));
+            return (p1.Row == p2.Row && CanDrawLine(p1.Row, p1.Column, p2.Column, (x, y) => Datas[x][y]))
+                || (p1.Column == p2.Column && CanDrawLine(p1.Column, p1.Row, p2.Row, (y, x) => Datas[x][y]));
         }
 
         private bool CanDrawLine(int same, int dif1, int dif2, Func<int, int, uint> func)
