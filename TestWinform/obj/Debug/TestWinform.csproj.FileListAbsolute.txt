@@ -1,0 +1,11 @@
+C:\Users\Administrator.SC-201608021220\Documents\Visual Studio 2012\Projects\CompteConnect\TestWinform\bin\Debug\TestWinform.exe.config
+C:\Users\Administrator.SC-201608021220\Documents\Visual Studio 2012\Projects\CompteConnect\TestWinform\bin\Debug\TestWinform.exe
+C:\Users\Administrator.SC-201608021220\Documents\Visual Studio 2012\Projects\CompteConnect\TestWinform\bin\Debug\TestWinform.pdb
+C:\Users\Administrator.SC-201608021220\Documents\Visual Studio 2012\Projects\CompteConnect\TestWinform\bin\Debug\CompteConnect.dll
+C:\Users\Administrator.SC-201608021220\Documents\Visual Studio 2012\Projects\CompteConnect\TestWinform\bin\Debug\CompteConnect.pdb
+C:\Users\Administrator.SC-201608021220\Documents\Visual Studio 2012\Projects\CompteConnect\TestWinform\obj\Debug\TestWinform.csprojResolveAssemblyReference.cache
+C:\Users\Administrator.SC-201608021220\Documents\Visual Studio 2012\Projects\CompteConnect\TestWinform\obj\Debug\TestWinform.Properties.Resources.resources
+C:\Users\Administrator.SC-201608021220\Documents\Visual Studio 2012\Projects\CompteConnect\TestWinform\obj\Debug\TestWinform.TestForm.resources
+C:\Users\Administrator.SC-201608021220\Documents\Visual Studio 2012\Projects\CompteConnect\TestWinform\obj\Debug\TestWinform.csproj.GenerateResource.Cache
+C:\Users\Administrator.SC-201608021220\Documents\Visual Studio 2012\Projects\CompteConnect\TestWinform\obj\Debug\TestWinform.exe
+C:\Users\Administrator.SC-201608021220\Documents\Visual Studio 2012\Projects\CompteConnect\TestWinform\obj\Debug\TestWinform.pdb
